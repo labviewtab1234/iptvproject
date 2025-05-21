@@ -293,10 +293,16 @@ input[type=submit]:hover {
 }
 .site-holder .sticky-header {
     z-index: 100000!important;
-    background: #203e51
+    background: #012237;
+}
+.header-row{
+    display: flex;
+    height: max-content;
+    align-items: center;
+    padding: 10px 8px;
 }
 .site-holder .sticky-wrapper {
-    height: 5.625rem!important
+    /* height: 5.625rem!important */
 }
 @media screen and (min-width: 992px) {
     .site-holder .sticky-wrapper.is-sticky>.sticky-header {
