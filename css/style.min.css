@@ -943,6 +943,9 @@ input[type=submit]:hover {
     }
 }
 @media screen and (max-width: 991px) {
+    .header-slider {
+      height: 550px;
+    }   
     .header-slider p {
         white-space: normal
     }
@@ -962,7 +965,7 @@ input[type=submit]:hover {
     text-align: center;
     transition: .3s linear;
     transition-property: color, background;
-    margin: 1.875em 1.25em 1.875em 0
+    /* margin: 1.875em 1.25em 3em 0 */
 }
 @media screen and (max-width: 767px) {
     .header-slider .slide-button {
@@ -2438,7 +2441,8 @@ input[type=submit]:hover {
     }
 }
 .site-quick-support {
-    background: url(../images/map.png) no-repeat 50%;
+    /* background: url(../images/map.png) no-repeat 50%; */
+    background:  #2b8dd9 url(../images/how-it-works-bg.png) no-repeat 50%;
     background-size: cover;
     padding-bottom: 9.375rem;
     overflow: hidden
@@ -3013,3 +3017,120 @@ input[type=submit]:hover {
     opacity: 0;
     visibility: hidden
 }
+
+/*  Contact section style */
+
+   .container-fluid-custom {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        /* Réinitialisation des marges/paddings par défaut des rows/cols de Bootstrap si nécessaire */
+        .row.display-flex {
+            display: flex;
+            flex-wrap: wrap; /* Permet aux cartes de passer à la ligne */
+            justify-content: center; /* Centre les colonnes dans la ligne */
+            margin-left: -15px; /* Compense le padding par défaut des colonnes */
+            margin-right: -15px;
+        }
+
+        .row.display-flex > [class*='col-'] {
+            display: flex; /* Rend la colonne elle-même un flex container */
+            flex-direction: column; /* Pour empiler le contenu de la carte */
+            align-items: center; /* Centre horizontalement le contenu de la carte */
+            justify-content: center; /* Centre verticalement le contenu de la carte */
+            margin-bottom: 30px; /* Espace entre les cartes lorsqu'elles s'empilent */
+        }
+        
+        /* Style des cartes individuelles */
+        .card {
+            background-color: #012237; /* Fond de carte gris foncé */
+            border-radius: 12px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Légère ombre */
+            height: 100%; /* Important pour que toutes les cartes aient la même hauteur */
+            width: 100%; /* Prend toute la largeur de sa colonne Bootstrap */
+            max-width: 350px; /* Limite la largeur de la carte même dans une grande colonne */
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Styles pour les icônes (logos) */
+        .icon {
+            width: 80px; /* Taille des icônes */
+            height: 80px;
+            margin-bottom: 25px;
+            border-radius: 50%; /* Pour donner un aspect circulaire si l'icône est carrée */
+            overflow: hidden; /* Cache les débordements si l'image n'est pas parfaitement ronde */
+        }
+        .icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* S'assure que l'image tient dans le cadre sans être coupée */
+        }
+
+        /* Styles pour les noms d'application */
+        .app-name {
+            color: #ffffff; /* Texte blanc */
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 35px;
+        }
+
+        /* Styles pour les boutons "Claim free trial" */
+        .claim-button {
+            border: none;
+            border-radius: 8px;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            width: 100%; /* Le bouton prend toute la largeur de sa colonne */
+            max-width: 220px; /* Limite la largeur du bouton même si la carte est plus large */
+        }
+
+        /* Styles spécifiques pour le bouton WhatsApp */
+        .whatsapp-button {
+            background-color: #25D366; /* Vert WhatsApp */
+            color: #ffffff;
+        }
+
+        .whatsapp-button:hover {
+            background-color: #1DA84A; /* Vert plus foncé au survol */
+            transform: translateY(-2px);
+        }
+
+        /* Styles spécifiques pour le bouton Telegram */
+        .telegram-button {
+            background-color: #0088CC; /* Bleu Telegram */
+            color: #ffffff;
+        }
+
+        .telegram-button:hover {
+            background-color: #006FB3; /* Bleu plus foncé au survol */
+            transform: translateY(-2px);
+        }
+
+        /* Pour gérer l'espacement entre les colonnes sur les écrans plus grands */
+        @media (min-width: 992px) { /* Medium devices (desktops, 992px and up) */
+            .col-md-6:nth-child(odd) {
+                padding-right: 15px; /* Standard Bootstrap gutter */
+            }
+            .col-md-6:nth-child(even) {
+                padding-left: 15px; /* Standard Bootstrap gutter */
+            }
+        }
+        @media (max-width: 991px) and (min-width: 768px) { /* Small devices (tablets, 768px to 991px) */
+            .col-sm-6:nth-child(odd) {
+                padding-right: 15px;
+            }
+            .col-sm-6:nth-child(even) {
+                padding-left: 15px;
+            }
+        }
