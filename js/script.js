@@ -18,7 +18,7 @@ function openWhatsApp() {
 function openTelegram() {
   // Remplacez 'YOUR_TELEGRAM_USERNAME' par le nom d'utilisateur Telegram (sans @)
   // Exemple : 'MyTelegramUser'
-  const telegramUsername = 'GeniusTV';
+  const telegramUsername = 'genuistv';
   // Pour ouvrir un chat direct avec un utilisateur : `tg://resolve?domain=${telegramUsername}`
   // Ou pour ouvrir Telegram avec un message pré-rempli (si l'appli est installée) : `tg://msg?text=Bonjour%20!`
   window.open(`https://t.me/${telegramUsername}`, '_blank');

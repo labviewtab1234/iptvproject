@@ -1694,10 +1694,17 @@ input[type=submit]:hover {
     clear: both;
     width: 100%;
     padding-bottom: 6.25rem;
-    padding-top: 8.125rem
+    padding-top: 8.125rem;
+    background: #1e5472;
+    /* background: #2b8dd9 url(../images/how-it-works-bg.png) no-repeat 50%; */
+    /* background: linear-gradient(135deg, #eaf3fa 0%, #f8f7f7 100%); */
 }
 .site-quick-view h1 {
     margin-bottom: 5rem
+}
+
+.site-quick-view .text-white{
+    color: #fff;
 }
 .site-quick-view .slide {
     margin: 0;
@@ -3018,7 +3025,7 @@ input[type=submit]:hover {
     visibility: hidden
 }
 
-/*  Contact section style */
+/*  ***************** Contact section style  ********************** */
 
    .container-fluid-custom {
             display: flex;
@@ -3134,3 +3141,41 @@ input[type=submit]:hover {
                 padding-left: 15px;
             }
         }
+
+    /*  **************** Logos slider ******************* */
+      .slider-container {
+      overflow: hidden;
+      white-space: nowrap;
+      box-sizing: border-box;
+      width: 100%;
+
+      padding: 10px 0;
+      cursor: grab;
+    }
+    .slider-container:active {
+      cursor: grabbing;
+    }
+
+    .slider-track {
+      display: flex;
+      transition: none;
+      will-change: transform;
+    }
+
+    .slider-track img {
+      width: 150px;
+      height: 46px;
+      margin-right: 30px;
+      vertical-align: middle;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
