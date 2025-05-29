@@ -141,10 +141,17 @@ input[type=submit]:hover {
 .container-fluid.wide {
     max-width: 1400px
 }
+
+@media (min-width: 1200px) {
+    .container{
+        width: 1400px !important;
+    }
+}
+
 @media screen and (min-width: 768px) {
     .container-fluid.wide {
-        padding-left: 5rem;
-        padding-right: 5rem
+        padding-left: 4rem;
+        padding-right: 4rem
     }
 }
 .swiper-container {
@@ -3156,7 +3163,7 @@ input[type=submit]:hover {
       cursor: grabbing;
     }
 
-    .slider-track {
+    .slider-track, .slider-track1 {
       display: flex;
       transition: none;
       will-change: transform;
@@ -3165,6 +3172,15 @@ input[type=submit]:hover {
     .slider-track img {
       width: 150px;
       height: 46px;
+      margin-right: 30px;
+      vertical-align: middle;
+      pointer-events: none;
+      user-select: none;
+    }
+
+   .slider-track1 img {
+      width: 230px;
+      height: 378px;
       margin-right: 30px;
       vertical-align: middle;
       pointer-events: none;
