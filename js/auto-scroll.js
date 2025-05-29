@@ -119,6 +119,8 @@ document.addEventListener("DOMContentLoaded", function () {
   // Utilisation pour chaque slider :
   initAutoScrollSlider('#sliderTrack', '#sliderContainer', { speed: 4, direction: 'left' });
   initAutoScrollSlider('#slider-track1', '#sliderContainer1', { speed: 4, direction: 'right' });
+  initAutoScrollSlider('#slider-track2', '#sliderContainer2', { speed: 4, direction: 'left' });
+  initAutoScrollSlider('#slider-track3', '#sliderContainer3', { speed: 4, direction: 'right' });
   // Pour un nouveau slider, ajoute simplement :
   // initAutoScrollSlider('#nouveauTrack', '#nouveauContainer', { speed: 3, direction: 'left' });
 });
